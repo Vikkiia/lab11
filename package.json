@@ -1,22 +1,27 @@
 {
-  "name": "lab11-jenkins-ci-cd",
+  "name": "lab11-github-actions-ci-cd",
   "version": "1.0.0",
-  "description": "Лабораторная работа 11: CI/CD с Jenkins для простой веб-страницы.",
+  "description": "Lab 11: CI/CD with GitHub Actions for a simple web form.",
   "main": "src/app.js",
   "scripts": {
     "start": "node scripts/serve.js",
-    "test": "node --test",
+    "test": "node --test tests/*.test.js",
+    "test:unit": "node --test tests/formLogic.test.js",
+    "test:ui": "node --test tests/ui.test.js",
     "build": "node scripts/build.js",
     "ci": "npm test && npm run build"
   },
   "keywords": [
-    "jenkins",
+    "github-actions",
     "ci-cd",
     "web-form"
   ],
-  "author": "student",
+  "author": "Ancr33z",
   "license": "MIT",
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "selenium-webdriver": "^4.43.0"
   }
 }

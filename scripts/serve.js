@@ -15,10 +15,11 @@ const contentTypes = {
 };
 
 const server = http.createServer((request, response) => {
-  const safePath = request.url === "/" ? "/index.html" : decodeURIComponent(request.url);
-  const filePath = path.normalize(path.join(staticDir, safePath));
+  const requestUrl = new URL(request.url, `http://${request.headers.host || "localhost"}`);
+  const safePath = requestUrl.pathname === "/" ? "/index.html" : decodeURIComponent(requestUrl.pathname);
+  const filePath = path.resolve(staticDir, `.${safePath}`);
 
-  if (!filePath.startsWith(staticDir)) {
+  if (!filePath.startsWith(`${staticDir}${path.sep}`)) {
     response.writeHead(403);
     response.end("Forbidden");
     return;
