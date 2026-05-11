@@ -1,0 +1,22 @@
+{
+  "name": "lab11-jenkins-ci-cd",
+  "version": "1.0.0",
+  "description": "Лабораторная работа 11: CI/CD с Jenkins для простой веб-страницы.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node scripts/serve.js",
+    "test": "node --test",
+    "build": "node scripts/build.js",
+    "ci": "npm test && npm run build"
+  },
+  "keywords": [
+    "jenkins",
+    "ci-cd",
+    "web-form"
+  ],
+  "author": "student",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}

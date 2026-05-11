@@ -1,0 +1,4 @@
+node_modules/
+dist/
+.jenkins/
+npm-debug.log*
