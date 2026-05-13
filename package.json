@@ -1,0 +1,27 @@
+{
+  "name": "lab11-github-actions-ci-cd",
+  "version": "1.0.0",
+  "description": "Lab 11: GitHub Actions CI/CD for a simple web form.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node scripts/serve.js",
+    "test": "node --test tests/*.test.js",
+    "test:unit": "node --test tests/formLogic.test.js",
+    "test:ui": "node --test tests/ui.test.js",
+    "build": "node scripts/build.js",
+    "ci": "npm test && npm run build"
+  },
+  "keywords": [
+    "github-actions",
+    "ci-cd",
+    "web-form"
+  ],
+  "author": "Ancr33z",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "selenium-webdriver": "^4.43.0"
+  }
+}
