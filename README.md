@@ -1,6 +1,6 @@
 # Лабораторная работа 11
 
-[![CI/CD](https://github.com/Ancr33z/lab11/actions/workflows/ci.yml/badge.svg)](https://github.com/Ancr33z/lab11/actions/workflows/ci.yml)
+[![CI/CD](https://github.com/Vikkiia/lab11/actions/workflows/ci.yml/badge.svg)](https://github.com/Vikkiia/lab11/actions/workflows/ci.yml)
 
 ## Тема
 
@@ -86,7 +86,7 @@ git init
 git branch -M main
 git add .
 git commit -m "Initial commit"
-git remote add origin https://github.com/Ancr33z/lab11.git
+git remote add origin https://github.com/Vikkiia/lab11.git
 git push -u origin main
 
 git checkout -b dev
