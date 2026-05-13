@@ -55,9 +55,12 @@ fields.forEach((fieldName) => {
   const field = document.querySelector(`#${fieldName}`);
 
   if (field) {
-    field.addEventListener("input", () => {
+    const clearFieldState = () => {
       setError(fieldName, "");
       statusNode.textContent = "";
-    });
+    };
+
+    field.addEventListener("input", clearFieldState);
+    field.addEventListener("change", clearFieldState);
   }
 });
